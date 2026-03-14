@@ -6,6 +6,27 @@
 	<title>jQuery Menu Example</title>
 
 	<link href="styles.css" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+		<script>
+$(document).ready(function(){
+
+"use strict";
+
+$("ul li ul").hide();
+
+$('.menulink').click(function(){
+
+    const thisMenu = $(this).next('ul');
+
+    $('ul li ul').not(thisMenu).hide();
+
+    thisMenu.toggle();
+
+});
+
+});
+
+	</script>
 </head>
 
 <body>
@@ -84,20 +105,8 @@
 		</aside>
 
 	</main>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script>
-	(function(){
-		"use strict";
-		$("ul li ul").hide();
-		$('.menulink').click(function(){
-			const thisMenu = $(this).next('ul');
-			$('ul li ul').not(thisMenu).hide(); 
-			thisMenu.toggle();
 
-		});
-	}());
 
-	</script>
 
 </body>
 
